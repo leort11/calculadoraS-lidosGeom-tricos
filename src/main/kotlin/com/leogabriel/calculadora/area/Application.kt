@@ -19,7 +19,7 @@ class CalculatorController {
 	data class CilinderResult(val perimetro: Double, val area: Double, val raio: Double, val diametro: Double, val volume: Double, val cumprimento: Double, val altura: Double)
     data class SphereResult(val perimetro: Double, val area: Double, val raio: Double, val diametro: Double, val volume: Double)
 	data class CubeResult(val perimetro: Double, val area: Double, val volume: Double, val lado: Double)
-	data class ConeResult(val perimetro: Double, val area: Double, val volume: Double, val lado: Double)
+	data class ConeResult(val perimetro: Double, val area: Double, val volume: Double, val lado: Double, val raio: Double, val diametro: Double)
 
     @GetMapping("/cilinder/")
     fun calculateCilinder(@RequestParam perimetro: Double, @RequestParam area: Double, @RequestParam raio: Double, @RequestParam diametro: Double, @RequestParam volume: Double, @RequestParam cumprimento, @RequestParam altura: Double): CilinderResult {
